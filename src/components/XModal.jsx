@@ -8,8 +8,7 @@ const UserDetailsModal = () => {
     email: "",
     phone: "",
     dob: ""
-  });
-  const [validationError, setValidationError] = useState("");
+  }); //Initially empty initialization
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -44,8 +43,7 @@ const UserDetailsModal = () => {
       return;
     }
 
-    // If all validations pass, reset the form data and close the modal
-    setValidationError("");
+
     setFormData({ username: "", email: "", phone: "", dob: "" });
     setIsOpen(false);
   };
@@ -70,7 +68,7 @@ const UserDetailsModal = () => {
                 <label htmlFor="username">Username:</label>
                 <input
                   type="text"
-                  name="username"
+                  name="username" //UserName field
                   id="username"
                   value={formData.username}
                   onChange={handleInputChange}
@@ -82,7 +80,7 @@ const UserDetailsModal = () => {
                 <input
                   type="email"
                   name="email"
-                  id="email"
+                  id="email"    //Email Field
                   value={formData.email}
                   onChange={handleInputChange}
                   required
@@ -93,7 +91,7 @@ const UserDetailsModal = () => {
                 <input
                   type="text"
                   name="phone"
-                  id="phone"
+                  id="phone"  //Phone Number Field
                   value={formData.phone}
                   onChange={handleInputChange}
                   required
